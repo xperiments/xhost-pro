@@ -1,0 +1,44 @@
+{
+  "name": "xhost-pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "upload": "cd scripts && node upload-firmware.js && node update-revision.js",
+    "revision": "cd scripts && node update-revision.js",
+    "pack": "./scripts/html2h.sh",
+    "firmS2": "cd scripts && python binmerge.py --output_name ./xhost.s2.4mb.bin --bin_path /Users/xperiments/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s2/bin/bootloader_dio_80m.bin /Users/xperiments/Documents/code/xhost-series/xperiments/xhost-pro/.pio/build/esp32-s2/partitions.bin /Users/xperiments/.platformio/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin ../.pio/build/esp32-s2/firmware.bin ../.pio/build/esp32-s2/.bin --bin_address 0x1000 0x8000 0xe000 0x10000 0x1b0000",
+    "ota:fw": "cd scripts && node ota.js fw $npm_config_context",
+    "ota:fs": "cd scripts && node ota.js fs $npm_config_context",
+    "ota:patch": "cd scripts && node ota-patch.js $npm_config_context",
+    "add-xhost": "git subtree add --prefix frontend https://github.com/xperiments/xhost.git master --squash",
+    "pull-xhost": "git subtree pull --prefix frontend https://github.com/xperiments/xhost.git master --squash",
+    "backup:8266": "esptool.py --port /dev/cu.usbserial-A50285BI read_flash 0x00000 0x400000 ./release/esp8266.bin",
+    "backup:S2": "esptool.py --chip esp32s2 --port /dev/cu.usbmodem01 read_flash 0x00000 0x400000 ./release/v6esp32s2.bkp.bin",
+    "flash:8266": "esptool.py --port /dev/cu.usbserial-A50285BI write_flash 0x00000 ./release/esp8266.bkp.bin",
+    "flash:S2": "esptool.py --port /dev/cu.usbmodem01 write_flash 0x00000 ./release/esp32s2.bkp.bin",
+    "import:xhost": "cd scripts && node frontend.js",
+    "package": "npm run revision && npm run import:xhost && npm run pack",
+    "build:fw": "pio run -e d1 && pio run -e esp32-s2 && npm run ota:fw",
+    "build:fw-flash": "pio run -e d1 --target=upload && pio run -e esp32-s2 --target=upload || exit 0 && npm run ota:fw",
+    "build:fs": "pio run -e d1 --target buildfs && pio run -e esp32-s2 --target buildfs",
+    "build:base": "npm run build:fs && npm run ota:fs --context=base",
+    "build:gh20b": "npm run ota:patch --context=ghen_20b && npm run ota:fs --context=gh20b",
+    "build": "npm run import:xhost && npm run pack && npm run build:fw && npm run build:base && npm run build:fw-flash && npm run backup:8266 && npm run backup:S2 && npm run build:gh20b"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concat-stream": "^2.0.0",
+    "deep-equal": "^2.0.5",
+    "evilscan": "^1.8.1",
+    "form-data": "^4.0.0",
+    "html-inline": "^1.2.0",
+    "node-fetch": "^3.2.0",
+    "node-gzip": "^1.1.2"
+  }
+}

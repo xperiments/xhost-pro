@@ -1,0 +1,777 @@
+<html>
+  <head>
+    <title>XHOST-PRO SETUP</title>
+    <meta charset="UTF-8" />
+    <style>:root{--color-black:black;--color-cod-gray:#101010;--color-white:white;--color-error:rgb(191, 95, 95);--color-primary-rgba:0,192,251;--color-primary:#00c0fb;--color-secondary-rgba:234,182,56;--color-secondary:#eab638}*{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none}body,html{height:100vh;width:100vw;overflow:hidden;cursor:none}body{background-color:var(--color-cod-gray);font-family:Arial,Helvetica,sans-serif;font-weight:800;height:100%;margin:0;overflow:hidden;padding:0}.secondary{color:var(--color-secondary)}select{pointer-events:all}.xhost__button{appearance:none;background-color:rgba(16,16,16,.9);border-radius:24px;border:5px solid rgba(var(--color-primary-rgba),.2);color:rgba(var(--color-primary-rgba),.6);cursor:pointer;flex-grow:1;font-family:inherit;font-size:24px;line-height:26px;font-weight:400;margin:2px;outline:0;padding:4px 24px;position:relative;text-align:right;text-overflow:ellipsis;user-select:none;white-space:nowrap;transition:height .2s ease-in-out;letter-spacing:-2px}[disabled] .xhost__button{background-color:transparent;border:5px solid var(--color-primary);pointer-events:none}.xhost__button[active]{border:5px solid var(--color-secondary);color:var(--color-black);font-weight:800;background-color:rgba(var(--color-primary-rgba),.7)}.xhost__button__secondary{border:5px solid rgba(var(--color-secondary-rgba),.3);color:rgba(var(--color-secondary-rgba),.7)}.xhost__button__secondary[active]{background-color:rgba(var(--color-secondary-rgba),.7);border:5px solid rgba(var(--color-secondary-rgba),.3);color:var(--color-black)}.xhost__button__payload{height:66px;min-width:206px}.xhost__button__small{min-width:70px;padding:0;text-align:center}.xhost__selectable-items{display:flex;width:calc(100% - 280px)}.xhost__selectable-items .xhost__button:last-of-type{margin-right:100px}.section-container{overflow-x:hidden;position:absolute;bottom:64px;width:100%;left:64px}section{width:calc(100% - 64px);display:flex;position:relative}section .xhost__button{opacity:0}section.active .xhost__button{opacity:1;height:148px}section .xhost__button__menu{opacity:1;min-width:240px;margin-right:16px}[hidden]{display:none!important}.xhost__logo-button{position:fixed;right:64px;top:64px}.xhost__logo{padding-bottom:24px;fill:var(--color-primary)}.xhost__logo-button .xhost__logo{padding-top:24px}.xhost__button .xhost-payload__desc{font-size:22px;overflow:hidden;position:relative;white-space:initial;font-weight:300;height:0;opacity:0;transition:height .3s linear;line-height:19px!important;padding-right:8px;color:var(--color-cod-gray)}.xhost__button[active]{font-size:28px}.xhost__button[active] .xhost-payload__desc:not(:empty){display:block;opacity:1;height:50%}.xhost__intro-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.xhost__payload-autoload{position:absolute;left:8px;bottom:8px;width:calc(100% - 16px);height:6px;background-color:var(--color-primary);border-radius:3px}.xhost__intro,.xhost__main{transition:opacity .5s linear;height:100%}.xhost__notification{font-size:32px;font-weight:200;position:fixed;top:8px;width:auto;max-width:512px;height:auto;right:-6px;background-color:var(--color-white);padding:16px;padding-right:96px;padding-left:32px;opacity:1;border-radius:6px}@media screen and (min-width:1541px){.xhost__notification{top:200px}}.xhost__svg-loader{stroke:var(--color-primary)}.xhost__notification.-error{background-color:var(--color-secondary);color:var(--color-black)}.xhost__cache{position:absolute;bottom:0;height:32px;width:100%;display:none}.xhost__cache .xhost__payload-autoload{position:absolute;opacity:.5}.xhost__cache-title{font-size:16px;color:var(--color-primary);top:-8px;left:8px;position:relative}.iframe{opacity:0}.xhost__context{position:fixed;left:50%;top:50%;width:600px;max-height:700px;transform:translate(-50%,-50%);display:none}.xhost__context ul{list-style-type:none;padding:0;overflow:hidden;max-height:650px}@media screen and (min-width:1541px){.xhost__context{max-height:800px}.xhost__context ul{max-height:750px}}.xhost__context .xhost__button__payload{min-width:98%;min-height:100px}.tiles{display:flex;flex-direction:column;justify-content:center;left:50%;position:fixed;top:50%;-webkit-transform:translateX(-50%) translateY(-50%) rotate(22.5deg)}.tiles__line{-webkit-animation:runner 20s linear infinite;display:flex;transform:translateX(25%)}.tiles__line:nth-child(2){-webkit-animation-duration:32s}.tiles__line:nth-child(3){-webkit-animation-duration:44s}.tiles2{top:56%;display:none}.tiles2 .tiles__line{-webkit-animation:runner 23s linear infinite;display:flex;transform:translateX(25%)}.tiles2 .tiles__line:nth-child(2){-webkit-animation-duration:8s}.tiles2 .tiles__line:nth-child(3){-webkit-animation-duration:12s}.tiles2 .tiles__line-img{--tile-margin:5vw;height:20vh;width:20vh;opacity:.8}.tiles2 .tiles__line-img--large{height:6vh;width:100vh;opacity:.5}@keyframes runner{to{-webkit-transform:translateX(-25%)}}.tiles__line-img{--tile-margin:3vw;background-position:50% 50%;background-size:cover;border-radius:50%;flex:none;height:30vh;margin:var(--tile-margin);width:30vh;background-color:var(--color-primary);opacity:.3}.tiles__line-img--large{border-radius:20vh;width:100vh;opacity:.3}.xhost__select{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:all;display:none;opacity:0}</style>
+    <style>
+      .xhost__firmware-input {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .xhost__notification {
+        font-size: 24px;
+      }
+      input[type="file"] {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tiles">
+      <div class="tiles__line">
+        <div class="tiles__line-img tiles__line-img--large"></div>
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img tiles__line-img--large"></div>
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img"></div>
+      </div>
+      <div class="tiles__line">
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img tiles__line-img--large"></div>
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img tiles__line-img--large"></div>
+      </div>
+      <div class="tiles__line">
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img tiles__line-img--large"></div>
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img tiles__line-img--large"></div>
+        <div class="tiles__line-img"></div>
+      </div>
+      <div class="tiles__line">
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img tiles__line-img--large"></div>
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img"></div>
+        <div class="tiles__line-img tiles__line-img--large"></div>
+        <div class="tiles__line-img"></div>
+      </div>
+    </div>
+    <div class="xhost__main" hidden>
+      <div class="xhost__logo-button" style="right: 32px">
+        <svg
+          viewBox="0 0 173 138"
+          width="180"
+          style="fill: var(--color-primary)"
+        >
+          <path
+            d="M38.668 29.433a4.215 4.215 0 0 1-4.198 4.198 4.622 4.622 0 0 1-2.913-1.185l-10.42-8.692a2.924 2.924 0 0 0-1.877-.74 2.883 2.883 0 0 0-1.729.74l-10.42 8.692a4.52 4.52 0 0 1-2.913 1.185 4.03 4.03 0 0 1-2.963-1.235A4.03 4.03 0 0 1 0 29.433a3.95 3.95 0 0 1 1.53-3.21L31.508 1.235A4.52 4.52 0 0 1 34.421.049a4.03 4.03 0 0 1 2.963 1.235 4.03 4.03 0 0 1 1.235 2.963 3.95 3.95 0 0 1-1.531 3.21l-9.778 8.198a1.48 1.48 0 0 0-.494 1.185 1.343 1.343 0 0 0 .494 1.185l9.778 8.198a3.998 3.998 0 0 1 1.58 3.21ZM13.531 8.543a3.847 3.847 0 0 1-1.234 2.914 3.74 3.74 0 0 1-1.334.988 4.52 4.52 0 0 1-1.63.197 4.344 4.344 0 0 1-2.913-1.234l-4.84-4a4.018 4.018 0 0 1-1.53-3.21 4.03 4.03 0 0 1 1.234-2.963A4.03 4.03 0 0 1 4.247 0a4.622 4.622 0 0 1 2.914 1.185l5.185 4.346a3.765 3.765 0 0 1 1.185 3.013ZM6.19 138.1H2.185A2.064 2.064 0 0 1 0 135.915V89.304a2.064 2.064 0 0 1 2.185-2.186h28.33a13.46 13.46 0 0 1 13.401 13.402v3.641a17.17 17.17 0 0 1-7.283 14.056 20.035 20.035 0 0 1-10.05 3.205H8.375v14.493A2.064 2.064 0 0 1 6.19 138.1Zm2.185-25.054h18.353a8.92 8.92 0 0 0 8.886-8.885v-1.821a6.9 6.9 0 0 0-6.92-6.846H8.376ZM55.64 138.1h-3.933a2.064 2.064 0 0 1-2.185-2.185V89.304a2.064 2.064 0 0 1 2.185-2.186h28.33a13.46 13.46 0 0 1 13.401 13.402v3.641a17.17 17.17 0 0 1-7.283 14.056c1.821 0 5.754 1.457 5.754 5.099v12.6a2.064 2.064 0 0 1-2.185 2.184h-4.006a2.064 2.064 0 0 1-2.184-2.185V125.5c0-3.496-2.185-4.078-5.608-4.078H57.825v14.493a2.064 2.064 0 0 1-2.185 2.185Zm2.185-25.054H76.25a8.92 8.92 0 0 0 8.886-8.885v-1.821a6.9 6.9 0 0 0-6.92-6.846h-20.39Zm95.622-4.733v8.593a21.26 21.26 0 0 1-21.193 21.194H119.8a21.26 21.26 0 0 1-21.194-21.194v-8.593A21.261 21.261 0 0 1 119.8 87.118h12.454a21.26 21.26 0 0 1 21.193 21.195Zm-46.465.145v8.303a13.07 13.07 0 0 0 13.037 13.036h12.016a13.07 13.07 0 0 0 13.037-13.036v-8.303a13.008 13.008 0 0 0-13.037-12.964H120.02a13.008 13.008 0 0 0-13.037 12.964ZM0 82.507V38.242a.576.576 0 0 1 .651-.652H3.19a.576.576 0 0 1 .652.652v25.843h31.052V38.242a.575.575 0 0 1 .65-.652h2.474a.576.576 0 0 1 .651.652v44.265a.576.576 0 0 1-.651.652h-2.474a.575.575 0 0 1-.65-.652v-14.58H3.84v14.58a.576.576 0 0 1-.652.652H.651A.575.575 0 0 1 0 82.507Zm56.7-.813a18.816 18.816 0 0 1-9.928-9.927 17.998 17.998 0 0 1-1.464-7.226v-8.398a17.776 17.776 0 0 1 1.464-7.193 18.914 18.914 0 0 1 9.927-9.895 17.835 17.835 0 0 1 7.161-1.465h12.173a17.997 17.997 0 0 1 7.226 1.465 18.513 18.513 0 0 1 5.891 4.004 19.326 19.326 0 0 1 3.971 5.89 17.775 17.775 0 0 1 1.465 7.194v8.398a17.998 17.998 0 0 1-1.465 7.226 19.22 19.22 0 0 1-3.97 5.924 18.526 18.526 0 0 1-5.892 4.003 17.997 17.997 0 0 1-7.226 1.465H63.86a17.835 17.835 0 0 1-7.16-1.465Zm19.138-2.376a14.48 14.48 0 0 0 5.826-1.172 15.492 15.492 0 0 0 4.752-3.19 14.734 14.734 0 0 0 3.223-4.751 14.553 14.553 0 0 0 1.172-5.794v-8.073a14.557 14.557 0 0 0-1.172-5.794 14.745 14.745 0 0 0-3.223-4.752 15.51 15.51 0 0 0-4.752-3.189 14.48 14.48 0 0 0-5.826-1.172H64.056a14.55 14.55 0 0 0-5.794 1.172 14.823 14.823 0 0 0-7.942 7.941 14.557 14.557 0 0 0-1.172 5.794v8.073a14.553 14.553 0 0 0 1.172 5.794 14.823 14.823 0 0 0 7.942 7.941 14.55 14.55 0 0 0 5.794 1.172Zm54.812-23.532a18.113 18.113 0 0 1 4.102 2.05 14.589 14.589 0 0 1 4.557 5.207 14.318 14.318 0 0 1 1.627 6.706v2.473a10.484 10.484 0 0 1-.88 4.232 11.156 11.156 0 0 1-2.342 3.482 11.292 11.292 0 0 1-3.45 2.344 10.417 10.417 0 0 1-4.264.879h-27.602a.575.575 0 0 1-.65-.652V79.97a.576.576 0 0 1 .65-.651h25.779a8.404 8.404 0 0 0 3.482-.716 9.745 9.745 0 0 0 2.832-1.92 8.501 8.501 0 0 0 1.921-2.832 8.83 8.83 0 0 0 .683-3.45v-.651a10.611 10.611 0 0 0-.846-4.199 10.713 10.713 0 0 0-5.76-5.761 10.62 10.62 0 0 0-4.2-.846h-19.854a6.961 6.961 0 0 1-2.832-.586 7.596 7.596 0 0 1-3.939-3.938 6.965 6.965 0 0 1-.586-2.832v-6.64a6.968 6.968 0 0 1 .586-2.832 7.587 7.587 0 0 1 3.939-3.939 6.961 6.961 0 0 1 2.832-.586h65.813a.576.576 0 0 1 .65.652v2.538a.576.576 0 0 1-.65.651h-18.879v41.076a.575.575 0 0 1-.65.652h-2.474a.575.575 0 0 1-.651-.652V41.431h-41.337a5.2 5.2 0 0 0-3.776 1.53 5.11 5.11 0 0 0-1.562 3.808v2.995a5.11 5.11 0 0 0 1.562 3.808 5.196 5.196 0 0 0 3.776 1.53h17.837a14.15 14.15 0 0 1 4.556.684Z"
+          />
+        </svg>
+      </div>
+      <div id="app" class="section-container"></div>
+    </div>
+    <div class="xhost__context xhost__button"></div>
+    <div class="xhost__notification-container"></div>
+    <div class="xhost__cache">
+      <div class="xhost__cache-title">CACHING</div>
+      <div class="xhost__payload-autoload"></div>
+      <div class="xhost__payload-autoload xhost__payload-autoload-bar"></div>
+    </div>
+    <select class="xhost__select"></select>
+    <input type="file" class="xhost__firmware-input" />
+    <script>
+      let SHOW_OFFLINE_ITEMS = true;
+    </script>
+    <script>!function(t){if("object"==typeof exports)module.exports=t();else if("function"==typeof define&&define.amd)define(t);else{var r;try{r=window}catch(t){r=self}r.SparkMD5=t()}}(function(t){"use strict";var r=["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];function e(t,r){var e=t[0],n=t[1],f=t[2],i=t[3];n=((n+=((f=((f+=((i=((i+=((e=((e+=(n&f|~n&i)+r[0]-680876936|0)<<7|e>>>25)+n|0)&n|~e&f)+r[1]-389564586|0)<<12|i>>>20)+e|0)&e|~i&n)+r[2]+606105819|0)<<17|f>>>15)+i|0)&i|~f&e)+r[3]-1044525330|0)<<22|n>>>10)+f|0,n=((n+=((f=((f+=((i=((i+=((e=((e+=(n&f|~n&i)+r[4]-176418897|0)<<7|e>>>25)+n|0)&n|~e&f)+r[5]+1200080426|0)<<12|i>>>20)+e|0)&e|~i&n)+r[6]-1473231341|0)<<17|f>>>15)+i|0)&i|~f&e)+r[7]-45705983|0)<<22|n>>>10)+f|0,n=((n+=((f=((f+=((i=((i+=((e=((e+=(n&f|~n&i)+r[8]+1770035416|0)<<7|e>>>25)+n|0)&n|~e&f)+r[9]-1958414417|0)<<12|i>>>20)+e|0)&e|~i&n)+r[10]-42063|0)<<17|f>>>15)+i|0)&i|~f&e)+r[11]-1990404162|0)<<22|n>>>10)+f|0,n=((n+=((f=((f+=((i=((i+=((e=((e+=(n&f|~n&i)+r[12]+1804603682|0)<<7|e>>>25)+n|0)&n|~e&f)+r[13]-40341101|0)<<12|i>>>20)+e|0)&e|~i&n)+r[14]-1502002290|0)<<17|f>>>15)+i|0)&i|~f&e)+r[15]+1236535329|0)<<22|n>>>10)+f|0,n=((n+=((f=((f+=((i=((i+=((e=((e+=(n&i|f&~i)+r[1]-165796510|0)<<5|e>>>27)+n|0)&f|n&~f)+r[6]-1069501632|0)<<9|i>>>23)+e|0)&n|e&~n)+r[11]+643717713|0)<<14|f>>>18)+i|0)&e|i&~e)+r[0]-373897302|0)<<20|n>>>12)+f|0,n=((n+=((f=((f+=((i=((i+=((e=((e+=(n&i|f&~i)+r[5]-701558691|0)<<5|e>>>27)+n|0)&f|n&~f)+r[10]+38016083|0)<<9|i>>>23)+e|0)&n|e&~n)+r[15]-660478335|0)<<14|f>>>18)+i|0)&e|i&~e)+r[4]-405537848|0)<<20|n>>>12)+f|0,n=((n+=((f=((f+=((i=((i+=((e=((e+=(n&i|f&~i)+r[9]+568446438|0)<<5|e>>>27)+n|0)&f|n&~f)+r[14]-1019803690|0)<<9|i>>>23)+e|0)&n|e&~n)+r[3]-187363961|0)<<14|f>>>18)+i|0)&e|i&~e)+r[8]+1163531501|0)<<20|n>>>12)+f|0,n=((n+=((f=((f+=((i=((i+=((e=((e+=(n&i|f&~i)+r[13]-1444681467|0)<<5|e>>>27)+n|0)&f|n&~f)+r[2]-51403784|0)<<9|i>>>23)+e|0)&n|e&~n)+r[7]+1735328473|0)<<14|f>>>18)+i|0)&e|i&~e)+r[12]-1926607734|0)<<20|n>>>12)+f|0,n=((n+=((f=((f+=((i=((i+=((e=((e+=(n^f^i)+r[5]-378558|0)<<4|e>>>28)+n|0)^n^f)+r[8]-2022574463|0)<<11|i>>>21)+e|0)^e^n)+r[11]+1839030562|0)<<16|f>>>16)+i|0)^i^e)+r[14]-35309556|0)<<23|n>>>9)+f|0,n=((n+=((f=((f+=((i=((i+=((e=((e+=(n^f^i)+r[1]-1530992060|0)<<4|e>>>28)+n|0)^n^f)+r[4]+1272893353|0)<<11|i>>>21)+e|0)^e^n)+r[7]-155497632|0)<<16|f>>>16)+i|0)^i^e)+r[10]-1094730640|0)<<23|n>>>9)+f|0,n=((n+=((f=((f+=((i=((i+=((e=((e+=(n^f^i)+r[13]+681279174|0)<<4|e>>>28)+n|0)^n^f)+r[0]-358537222|0)<<11|i>>>21)+e|0)^e^n)+r[3]-722521979|0)<<16|f>>>16)+i|0)^i^e)+r[6]+76029189|0)<<23|n>>>9)+f|0,n=((n+=((f=((f+=((i=((i+=((e=((e+=(n^f^i)+r[9]-640364487|0)<<4|e>>>28)+n|0)^n^f)+r[12]-421815835|0)<<11|i>>>21)+e|0)^e^n)+r[15]+530742520|0)<<16|f>>>16)+i|0)^i^e)+r[2]-995338651|0)<<23|n>>>9)+f|0,n=((n+=((i=((i+=(n^((e=((e+=(f^(n|~i))+r[0]-198630844|0)<<6|e>>>26)+n|0)|~f))+r[7]+1126891415|0)<<10|i>>>22)+e|0)^((f=((f+=(e^(i|~n))+r[14]-1416354905|0)<<15|f>>>17)+i|0)|~e))+r[5]-57434055|0)<<21|n>>>11)+f|0,n=((n+=((i=((i+=(n^((e=((e+=(f^(n|~i))+r[12]+1700485571|0)<<6|e>>>26)+n|0)|~f))+r[3]-1894986606|0)<<10|i>>>22)+e|0)^((f=((f+=(e^(i|~n))+r[10]-1051523|0)<<15|f>>>17)+i|0)|~e))+r[1]-2054922799|0)<<21|n>>>11)+f|0,n=((n+=((i=((i+=(n^((e=((e+=(f^(n|~i))+r[8]+1873313359|0)<<6|e>>>26)+n|0)|~f))+r[15]-30611744|0)<<10|i>>>22)+e|0)^((f=((f+=(e^(i|~n))+r[6]-1560198380|0)<<15|f>>>17)+i|0)|~e))+r[13]+1309151649|0)<<21|n>>>11)+f|0,n=((n+=((i=((i+=(n^((e=((e+=(f^(n|~i))+r[4]-145523070|0)<<6|e>>>26)+n|0)|~f))+r[11]-1120210379|0)<<10|i>>>22)+e|0)^((f=((f+=(e^(i|~n))+r[2]+718787259|0)<<15|f>>>17)+i|0)|~e))+r[9]-343485551|0)<<21|n>>>11)+f|0,t[0]=e+t[0]|0,t[1]=n+t[1]|0,t[2]=f+t[2]|0,t[3]=i+t[3]|0}function n(t){var r,e=[];for(r=0;r<64;r+=4)e[r>>2]=t.charCodeAt(r)+(t.charCodeAt(r+1)<<8)+(t.charCodeAt(r+2)<<16)+(t.charCodeAt(r+3)<<24);return e}function f(t){var r,e=[];for(r=0;r<64;r+=4)e[r>>2]=t[r]+(t[r+1]<<8)+(t[r+2]<<16)+(t[r+3]<<24);return e}function i(t){var r,f,i,h,o,s,a=t.length,u=[1732584193,-271733879,-1732584194,271733878];for(r=64;r<=a;r+=64)e(u,n(t.substring(r-64,r)));for(f=(t=t.substring(r-64)).length,i=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],r=0;r<f;r+=1)i[r>>2]|=t.charCodeAt(r)<<(r%4<<3);if(i[r>>2]|=128<<(r%4<<3),r>55)for(e(u,i),r=0;r<16;r+=1)i[r]=0;return h=(h=8*a).toString(16).match(/(.*?)(.{0,8})$/),o=parseInt(h[2],16),s=parseInt(h[1],16)||0,i[14]=o,i[15]=s,e(u,i),u}function h(t){var e,n="";for(e=0;e<4;e+=1)n+=r[t>>8*e+4&15]+r[t>>8*e&15];return n}function o(t){var r;for(r=0;r<t.length;r+=1)t[r]=h(t[r]);return t.join("")}function s(t){return/[\u0080-\uFFFF]/.test(t)&&(t=unescape(encodeURIComponent(t))),t}function a(t){var r,e=[],n=t.length;for(r=0;r<n-1;r+=2)e.push(parseInt(t.substr(r,2),16));return String.fromCharCode.apply(String,e)}function u(){this.reset()}return"5d41402abc4b2a76b9719d911017c592"!==o(i("hello"))&&function(t,r){var e=(65535&t)+(65535&r);return(t>>16)+(r>>16)+(e>>16)<<16|65535&e},"undefined"==typeof ArrayBuffer||ArrayBuffer.prototype.slice||function(){function r(t,r){return(t=0|t||0)<0?Math.max(t+r,0):Math.min(t,r)}ArrayBuffer.prototype.slice=function(e,n){var f,i,h,o,s=this.byteLength,a=r(e,s),u=s;return n!==t&&(u=r(n,s)),a>u?new ArrayBuffer(0):(f=u-a,i=new ArrayBuffer(f),h=new Uint8Array(i),o=new Uint8Array(this,a,f),h.set(o),i)}}(),u.prototype.append=function(t){return this.appendBinary(s(t)),this},u.prototype.appendBinary=function(t){this._buff+=t,this._length+=t.length;var r,f=this._buff.length;for(r=64;r<=f;r+=64)e(this._hash,n(this._buff.substring(r-64,r)));return this._buff=this._buff.substring(r-64),this},u.prototype.end=function(t){var r,e,n=this._buff,f=n.length,i=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];for(r=0;r<f;r+=1)i[r>>2]|=n.charCodeAt(r)<<(r%4<<3);return this._finish(i,f),e=o(this._hash),t&&(e=a(e)),this.reset(),e},u.prototype.reset=function(){return this._buff="",this._length=0,this._hash=[1732584193,-271733879,-1732584194,271733878],this},u.prototype.getState=function(){return{buff:this._buff,length:this._length,hash:this._hash.slice()}},u.prototype.setState=function(t){return this._buff=t.buff,this._length=t.length,this._hash=t.hash,this},u.prototype.destroy=function(){delete this._hash,delete this._buff,delete this._length},u.prototype._finish=function(t,r){var n,f,i,h=r;if(t[h>>2]|=128<<(h%4<<3),h>55)for(e(this._hash,t),h=0;h<16;h+=1)t[h]=0;n=(n=8*this._length).toString(16).match(/(.*?)(.{0,8})$/),f=parseInt(n[2],16),i=parseInt(n[1],16)||0,t[14]=f,t[15]=i,e(this._hash,t)},u.hash=function(t,r){return u.hashBinary(s(t),r)},u.hashBinary=function(t,r){var e=o(i(t));return r?a(e):e},u.ArrayBuffer=function(){this.reset()},u.ArrayBuffer.prototype.append=function(t){var r,n,i,h,o,s=(n=this._buff.buffer,i=t,h=!0,(o=new Uint8Array(n.byteLength+i.byteLength)).set(new Uint8Array(n)),o.set(new Uint8Array(i),n.byteLength),h?o:o.buffer),a=s.length;for(this._length+=t.byteLength,r=64;r<=a;r+=64)e(this._hash,f(s.subarray(r-64,r)));return this._buff=r-64<a?new Uint8Array(s.buffer.slice(r-64)):new Uint8Array(0),this},u.ArrayBuffer.prototype.end=function(t){var r,e,n=this._buff,f=n.length,i=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];for(r=0;r<f;r+=1)i[r>>2]|=n[r]<<(r%4<<3);return this._finish(i,f),e=o(this._hash),t&&(e=a(e)),this.reset(),e},u.ArrayBuffer.prototype.reset=function(){return this._buff=new Uint8Array(0),this._length=0,this._hash=[1732584193,-271733879,-1732584194,271733878],this},u.ArrayBuffer.prototype.getState=function(){var t,r=u.prototype.getState.call(this);return r.buff=(t=r.buff,String.fromCharCode.apply(null,new Uint8Array(t))),r},u.ArrayBuffer.prototype.setState=function(t){return t.buff=function(t,r){var e,n=t.length,f=new ArrayBuffer(n),i=new Uint8Array(f);for(e=0;e<n;e+=1)i[e]=t.charCodeAt(e);return r?i:f}(t.buff,!0),u.prototype.setState.call(this,t)},u.ArrayBuffer.prototype.destroy=u.prototype.destroy,u.ArrayBuffer.prototype._finish=u.prototype._finish,u.ArrayBuffer.hash=function(t,r){var n=o(function(t){var r,n,i,h,o,s,a=t.length,u=[1732584193,-271733879,-1732584194,271733878];for(r=64;r<=a;r+=64)e(u,f(t.subarray(r-64,r)));for(n=(t=r-64<a?t.subarray(r-64):new Uint8Array(0)).length,i=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],r=0;r<n;r+=1)i[r>>2]|=t[r]<<(r%4<<3);if(i[r>>2]|=128<<(r%4<<3),r>55)for(e(u,i),r=0;r<16;r+=1)i[r]=0;return h=(h=8*a).toString(16).match(/(.*?)(.{0,8})$/),o=parseInt(h[2],16),s=parseInt(h[1],16)||0,i[14]=o,i[15]=s,e(u,i),u}(new Uint8Array(t)));return r?a(n):n},u});</script>
+    <script>const menuData = {
+  "xhost-pro": {
+    items: [
+      {
+        name: "Network Setup",
+        desc: "Setup Network connection params",
+        action: "contextMenu",
+        silent: true,
+        actionParams: [
+          {
+            name$:
+              "SSID: <span class='secondary'>{{xhostPro.config.staSsid}}</span>",
+            desc$:
+              "IP:<span class='secondary'>{{xhostPro.ssid.staIP}}</span> - Router:<span class='secondary'>{{xhostPro.ssid.gatewayIP}}</span>",
+            guard: "wifiMode",
+            guardParams: "sta",
+            silent: "true",
+          },
+          {
+            name: "Change SSID network (Easy)",
+            guard: "wifiMode",
+            action: "connectToSSID",
+            actionParams: "easy",
+            guardParams: "sta",
+            silent: "true",
+          },
+          {
+            name: "Change SSID network (Custom)",
+            guard: "wifiMode",
+            action: "connectToSSID",
+            actionParams: "custom",
+            guardParams: "sta",
+            silent: "true",
+          },
+          {
+            name: "Switch to AP",
+            desc: "http://xhost.local",
+            guard: "wifiMode",
+            action: "switchToAP",
+            guardParams: "sta",
+            silent: "true",
+          },
+          /*----------------------------------------*/
+          {
+            name: "AP Mode - SSID: xhost-pro<br/>xhost.local",
+            guard: "wifiMode",
+            guardParams: "ap",
+            silent: "true",
+          },
+          {
+            name: "Connect Home WiFi (Easy)",
+            guard: "wifiMode",
+            action: "connectToSSID",
+            actionParams: "easy",
+            guardParams: "ap",
+            silent: "true",
+          },
+          {
+            name: "Connect Home WiFi (Custom)",
+            guard: "wifiMode",
+            action: "connectToSSID",
+            actionParams: "custom",
+            guardParams: "ap",
+            silent: "true",
+          },
+        ],
+      },
+      {
+        name: "Firmware",
+        desc: "Update firmware [online/file]",
+        action: "contextMenu",
+        silent: true,
+        actionParams: [
+          {
+            name: "Online Firmware Update",
+            action: "downloadFirmware",
+            actionParams: "http://6.6.6.7:8080/release/esp32-s2.fw.ota",
+            silent: true,
+          },
+          {
+            name: "Online Filesystem Update",
+            action: "downloadFilesystem",
+            actionParams: "http://6.6.6.7:8080/release/esp32-s2.fw.ota",
+            silent: true,
+          },
+          {
+            name: "Flash New Firmware",
+            action: "uploadFimware",
+            silent: true,
+          },
+          {
+            name: "Flash new Filesystem",
+            action: "uploadFilesystem",
+            silent: true,
+          },
+        ],
+      },
+      {
+        name: "System",
+        desc: "Setup System settings",
+        action: "contextMenu",
+        silent: true,
+        actionParams: [
+          {
+            name$: "XHOST-PRO<br/>v{{xhostPro.version}}",
+            silent: true,
+          },
+          {
+            name: "USB mount delay",
+            action: "select",
+            actionParams: {
+              options: {
+                Disabled: "0",
+                "10s": "10000",
+                "15s": "15000",
+                "20s": "20000",
+              },
+              onchange: "usbDelay",
+              store: "usbDelay",
+            },
+            silent: true,
+          },
+          // {
+          //   name: "Micro SD",
+          //   actionParams: {
+          //     options: {
+          //       enabled: "Enabled",
+          //       disabled: "Disabled",
+          //     },
+          //     onchange: "microSD",
+          //     store: "microSD",
+          //   },
+          //   silent: true,
+          // },
+        ],
+      },
+      {
+        name: "Back to Host",
+        action: "loadUrl",
+        actionParams: "/",
+        silent: true,
+      },
+    ],
+  },
+};
+</script>
+    <script>/*
+ MIT
+
+ @param  {string} selector    CSS selector
+ @return {object}             Single or multiple DOM Nodes
+*/
+const $=(selector,root=document)=>{const matches={"#":"getElementById",".":"getElementsByClassName","@":"getElementsByName","=":"getElementsByTagName","?":"querySelectorAll"};const rex=/[?=#@.*]/.exec(selector)[0];const nodes=root[matches[rex]](selector.split(rex)[1]);if(nodes.length==1)return nodes[0];return nodes};
+const notify=(text,level=0,delay=0,duration=5E3)=>{const notifyLevel={0:"",1:" -error"};setTimeout(()=>{$("?.xhost__notification-container").innerHTML=`<div class="xhost__notification ${notifyLevel[level]}">${text}</div>`},delay);setTimeout(()=>{$("?.xhost__notification-container").innerHTML=""},delay+duration)};window.notify=notify;
+if(window.applicationCache){window.applicationCache.addEventListener("updateready",e=>{if(window.applicationCache.status==window.applicationCache.UPDATEREADY){notify("CACHE UPDATED<br/>RELOADING",1);setTimeout(()=>{window.location.reload()},3E3)}},false);window.applicationCache.ondownloading=()=>{$(".xhost__cache").style.display="block";notify("CACHING STARTED",1)};window.applicationCache.onprogress=a=>{let w=Math.round(100*(a.loaded/a.total));if(w>100||isNaN(w))w=100;$(".xhost__payload-autoload-bar").style.width=
+w+"%"};window.applicationCache.oncached=()=>{$(".xhost__cache").style.display="none";notify("CACHING COMPLETED",1)}}
+const HashStorage=()=>{const encodeHash=()=>{return"#"+btoa(JSON.stringify(hashStore))};let hashStore;return{initialize(callback){const hash=(new URL(window.location.href)).hash===""?"#"+btoa("{}"):(new URL(window.location.href)).hash;try{hashStore=JSON.parse(atob(hash.substring(1)))}catch(e){throw new Error("Unable to parse hash");}callback(hashStore)},getItem(name){return hashStore[name]||null},setItem(name,value){hashStore[name]=value;history.replaceState(undefined,undefined,encodeHash())}}};
+const hashStorage=HashStorage();
+</script>
+    <script>let selects;let selectStores;let guards={};let binaryLoaderStatus=false;window.XHOST_USB_MODE="manual";const getBinaryLoaderStatus=()=>{binaryLoaderStatus=false;return fetch("http://127.0.0.1:9090/status",{method:"POST"}).then(response=>response.json()).then(response=>{if(response.status=="ready"){binaryLoaderStatus=true;return}notify("Cannot Load Payload Because binloader Server Is Busy",1)})};
+const injectBinaryPayloadPOST=(PLfile,responseTranformer)=>{fetch("http://127.0.0.1:9090/status").then(response=>response.json()).then(response=>{if(response.status=="ready"){fetch(PLfile).then(response=>response.arrayBuffer()).then(buffer=>{return responseTranformer?responseTranformer(buffer):buffer}).then(buffer=>{fetch("http://127.0.0.1:9090",{method:"POST",body:buffer}).then(()=>{notify("Payload Transfer Complete",0)}).catch(()=>{notify("Can't send the payload",1)});return buffer}).catch(()=>
+{notify("Unable to load payload",1)});return}notify("Cannot Load Payload Because binloader Server Is Busy",1)}).catch(error=>{$(".iframe").contentWindow.setKernelContext({usbMode:"manual",usbDelay:1E4});$(".iframe").contentWindow.action__postBinaryPayload(PLfile,responseTranformer)})};const action__loadUrl=url=>{window.location.href=url};
+const action__setFan=({data})=>{const transformer=arrayBuffer=>{const arr=new Uint8Array(arrayBuffer);arr[7464]=data;return arr.buffer};if(navigator.onLine){injectBinaryPayloadPOST(`pl/fan.bin`,transformer);return}$(".iframe").contentWindow.action__postBinaryPayload(`pl/fan.bin`,transformer)};
+const action__loadLinux=({data})=>{const transformer=arrayBuffer=>{const arr=new Uint8Array(arrayBuffer);arr[16542]=data;arr[16566]=data;return arr.buffer};if(navigator.onLine){injectBinaryPayloadPOST(`pl/linux-loader.bin`,transformer);return}$(".iframe").contentWindow.action__postBinaryPayload(`pl/linux-loader.bin`,transformer)};const action__postBinaryPayload=payloadUrl=>{if(navigator.onLine){injectBinaryPayloadPOST(`pl/${payloadUrl}`);return}$(".iframe").contentWindow.action__postBinaryPayload(`pl/${payloadUrl}`)};
+const action__showPayloads=()=>{const $hostMain=$(".xhost__main");$hostMain.style.opacity=0;$hostMain.removeAttribute("hidden");$hostMain.style.opacity=1};
+const action__contextMenu=items=>{contextMenuItems=[{name:"back",action:"contextMenuClose",class:"xhost__button__secondary",silent:true},...items.filter(e=>{return e.guard?guards[`guard__${e.guard}`](e.guardParams?e.guardParams:undefined):true})];showContextMenu=true;generateContextMenu(contextMenuItems);contextMenuActiveMenuIndex=0;renderContextMenu();$(".xhost__context").style.display="block"};
+const action__contextMenuClose=()=>{showContextMenu=false;renderMainMenu();$(".xhost__context").style.display="none"};const action__loadBinaryLoader=()=>{$(".iframe").contentWindow.action__loadBinaryLoader()};const action__loadMiraJailbreak=()=>{$(".iframe").contentWindow.action__loadMiraJailbreak()};const action__loadMira=()=>{$(".iframe").contentWindow.action__loadMira()};
+const select__themeSpeed=(option,verbose=true)=>{$(".tiles2").style.display=option.value==="parallax"?"block":"none";hashStorage.setItem("themeSpeed",option.value);if(verbose)notify("Bookmark to SAVE SETTINGS!!",1)};
+const select__theme=(option,verbose=true)=>{const themeValues=JSON.parse(option.value);const root=document.documentElement.style;root.setProperty("--color-black",themeValues[0]);root.setProperty("--color-cod-gray",themeValues[1]);root.setProperty("--color-white",themeValues[2]);root.setProperty("--color-error",themeValues[3]);root.setProperty("--color-primary-rgba",themeValues[4]);root.setProperty("--color-primary",themeValues[5]);root.setProperty("--color-secondary-rgba",themeValues[6]);root.setProperty("--color-secondary",
+themeValues[7]);hashStorage.setItem("theme",option.value);if(verbose)notify("Bookmark to SAVE SETTINGS!!",1)};
+hashStorage.initialize(()=>{const theme=hashStorage.getItem("theme");const themeSpeed=hashStorage.getItem("themeSpeed");selectStores={...selectStores,themeSpeed:themeSpeed?themeSpeed:"original",theme:theme?theme:'["black","#101010","white","rgb(191,95,95)","0,192,251","#00c0fb","234,182,56","#eab638"]'};if(theme)select__theme({value:theme},false);if(themeSpeed)select__themeSpeed({value:themeSpeed},false)});const action__selectParams={};const action__select=()=>{};
+selects={...selects,select__theme,select__themeSpeed};$(".xhost__select").addEventListener("change",()=>{selects["select__"+action__selectParams.params.onchange]({value:$(".xhost__select").options[$(".xhost__select").selectedIndex].value});selectStores[action__selectParams.params.store]=$(".xhost__select").options[$(".xhost__select").selectedIndex].value});
+let actions={action__contextMenu,action__contextMenuClose,action__loadBinaryLoader,action__loadLinux,action__loadMira,action__loadMiraJailbreak,action__loadUrl,action__postBinaryPayload,action__setFan,action__showPayloads,action__select};const guard__isOnline=()=>{return navigator.onLine};let guard__isXHOSTPRO=()=>{return false};guards={...guards,guard__isOnline,guard__isXHOSTPRO};
+</script>
+    <script>let mainMenu;let mainMenuKeys;let mainMenuLength;let mainMenuActiveIndex=0;let mainSubmenuActiveIndex=0;let mainMenuRows;let showContextMenu=false;let contextMenuCurrent;let contextMenuItems;let contextMenuItemsMeta={};let contextMenuActiveMenuIndex=0;let xhostAppData={};const getContextSelectables=()=>{return Array.from($(".xhost__button__payload",$("?.xhost__context"))).filter(el=>el.getAttribute("hidden")!="")};
+const xhostMouseUp=e=>{if(e)e.preventDefault();let targetEl;if(showContextMenu)targetEl=contextMenuItems[contextMenuActiveMenuIndex];else targetEl=mainMenu[mainMenuKeys[mainMenuActiveIndex]].items[mainSubmenuActiveIndex];const {action,actionParams}=targetEl;if(!action)return;if(["loadBinaryLoader","loadLinux","loadMira","loadMiraJailbreak","postBinaryPayload","setFan"].includes(action))if($(".iframe").contentWindow.checkNeedsReload())return;actions["action__"+action].call(null,actionParams);if(!targetEl.silent)notify(`Running Payload: ${targetEl.name}`);
+return};document.addEventListener("mouseup",xhostMouseUp);window.addEventListener("keyup",e=>{if(e.key=="Enter")xhostMouseUp()});
+document.addEventListener("keydown",e=>{e.preventDefault();if(showContextMenu){switch(e.keyCode){case 38:contextMenuActiveMenuIndex-=1;if(contextMenuActiveMenuIndex<0)contextMenuActiveMenuIndex=0;break;case 40:contextMenuActiveMenuIndex+=1;if(contextMenuActiveMenuIndex>=getContextSelectables().length)contextMenuActiveMenuIndex=getContextSelectables().length-1;break}renderContextMenu();if(contextMenuItems[contextMenuActiveMenuIndex].action==="select"){const tmpParams=contextMenuItems[contextMenuActiveMenuIndex].actionParams;
+action__selectParams.params=tmpParams;$(".xhost__select").innerHTML=Object.keys(tmpParams.options).reduce((acc,key)=>{const selected=selectStores[tmpParams.store]===tmpParams.options[key];acc+=`<option value='${tmpParams.options[key]}'${selected?" selected":""}>${key}</option>`;return acc},"");$(".xhost__select").style.display="block"}else $(".xhost__select").style.display="none";return}switch(e.keyCode){case 37:mainSubmenuActiveIndex-=1;if(mainSubmenuActiveIndex<0)mainSubmenuActiveIndex=0;break;
+case 39:mainSubmenuActiveIndex+=1;if(mainSubmenuActiveIndex>=mainMenu[mainMenuKeys[mainMenuActiveIndex]].items.length)mainSubmenuActiveIndex=mainMenu[mainMenuKeys[mainMenuActiveIndex]].items.length-1;break;case 38:mainMenuActiveIndex-=1;if(mainMenuActiveIndex<0)mainMenuActiveIndex=mainMenuRows.length-1;mainSubmenuActiveIndex=0;break;case 40:mainMenuActiveIndex+=1;if(mainMenuActiveIndex>mainMenuRows.length-1)mainMenuActiveIndex=0;mainSubmenuActiveIndex=0;break}renderMainMenu()});
+const generateMainMenu=()=>{const container=$(".section-container");const outputHTML=Object.keys(mainMenu).reduce((acc,key,idx)=>{const items=mainMenu[key].items.map(item=>{return`<button class="xhost__button xhost__button__payload ${mainMenu[key].smallButtons?"xhost__button__small":""}"><div class="xhost__item-name">${item.name}</div><div class="xhost-payload__desc">${item.desc?item.desc:""}</div></button>`}).join("");return`${acc}<section row="${idx}" ${idx===mainMenuActiveIndex?"":"disabled"} class="${idx===
+mainMenuActiveIndex?"active":""}"><button active class="xhost__button xhost__button__menu xhost__button__secondary xhost__button__payload"><div>${key}</div></button><div class="xhost__selectable-items">${items}</div></section>`},"");container.innerHTML=container.innerHTML+outputHTML;const rows=$(`?[row]`);mainMenuRows=rows.length?rows:[rows]};
+const computeContext=(str,context)=>{return str.match(/({{(.+?)}})/gi).reduce((acc,match)=>acc.replaceAll(match,match.replace(/[{}]./g,"").split(".").reduce((o,i)=>o[i],context)),str)};const generateContextMenu=items=>{const output="<ul>"+items.map(item=>{return`<li><button class="xhost__button xhost__button__payload ${item.class?item.class:""}">
+  <div>${item.name$?computeContext(item.name$,xhostAppData):item.name}</div>
+  <div class="xhost-payload__desc">${item.desc$?computeContext(item.desc$,xhostAppData):item.desc||""}</div>
+</button></li>`}).join("")+"</ul>";$(".xhost__context").innerHTML=output};const renderContextMenu=()=>{const selectables=getContextSelectables();selectables.forEach(el=>{el.removeAttribute("active")});selectables[contextMenuActiveMenuIndex].setAttribute("active","");selectables[contextMenuActiveMenuIndex].scrollIntoView();contextMenuCurrent=selectables[contextMenuActiveMenuIndex]};
+const renderMainMenu=()=>{console.log(mainMenuRows);if(!mainMenuRows)return;mainMenuRows.forEach(e=>{e.setAttribute("disabled","");e.classList.remove("active")});const activeRow=$(`?[row="${mainMenuActiveIndex}"]`);activeRow.removeAttribute("disabled");activeRow.classList.add("active");$("?.xhost__selectable-items button").forEach(el=>{el.removeAttribute("active")},mainMenuRows[mainMenuActiveIndex]);const selectables=$("?.xhost__selectable-items button",mainMenuRows[mainMenuActiveIndex]);let target;
+if(selectables.length)target=selectables[mainSubmenuActiveIndex];else target=selectables;target.setAttribute("active","");target.scrollIntoView({behavior:"smooth",block:"center"})};const removeHiddenMenus=menu=>{return Object.keys(menu).reduce((acc,key)=>{acc[key]=menu[key];if(acc[key].items)acc[key].items=menu[key].items.filter(e=>{return e.guard?guards[`guard__${e.guard}`](e.guardParams?e.guardParams:undefined):true});return acc},{})};
+let xhostMain=()=>{return fetch("menu.json").then(r=>r.json()).then(r=>removeHiddenMenus(r)).then(menuJson=>{mainMenu=menuJson;mainMenuKeys=Object.keys(mainMenu);mainMenuLength=mainMenuKeys.length;action__showPayloads();generateMainMenu();renderMainMenu();return menuJson})};
+</script>
+    <script>xhostAppData = {
+  ...xhostAppData,
+  xhostPro: {
+    config: {},
+    ssid: {},
+    version: "",
+  },
+};
+
+selectStores = { ...selectStores, microSD: "disabled" };
+
+const select__usbDelay = (option) => {
+  const value = option.value;
+  selectStores.usbDelay = value;
+  const formData = new FormData();
+  formData.append("usbMode", value === "0" ? "manual" : "auto");
+  formData.append("usbDelay", value);
+
+  fetch("/xhost/config", {
+    method: "POST",
+    body: formData,
+  }).then(() => {
+    notify("Configuration Updated");
+  });
+};
+
+const select__microSD = (option) => {
+  alert(option.innerText + " select__microSD ," + option.value);
+};
+
+selects = {
+  ...selects,
+  select__usbDelay,
+  select__microSD,
+};
+
+const loadSsidConfig = () => {
+  return fetch("/xhost/wifi/ssid")
+    .then((r) => r.json())
+    .then((r) => {
+      xhostAppData.xhostPro.ssid = r;
+      return r;
+    });
+};
+const loadConfig = () =>
+  fetch("/config.json")
+    .then((r) => r.json())
+    .then((config) => {
+      const { usbDelay, usbMode } = config;
+      window.XHOST_USB_MODE = usbMode || "manual";
+      xhostAppData.xhostPro.config = config;
+      xhostAppData.selectStores = {
+        ...selectStores,
+        usbDelay,
+        usbMode,
+      };
+    });
+
+const loadVersion = () => {
+  return fetch("/xhost/version")
+    .then((r) => r.json())
+    .then((result) => {
+      const { flashVersion } = result;
+      xhostAppData.xhostPro.version = flashVersion.replace(".xhost-pro", "");
+      return flashVersion;
+    });
+};
+
+/* semver compare */
+const semverCompare = (a, b) => {
+  const pa = a.split(".");
+  const pb = b.split(".");
+  for (var i = 0; i < 3; i++) {
+    const na = Number(pa[i]);
+    const nb = Number(pb[i]);
+    if (na > nb) return 1;
+    if (nb > na) return -1;
+    if (!isNaN(na) && isNaN(nb)) return 1;
+    if (isNaN(na) && !isNaN(nb)) return -1;
+  }
+  return 0;
+};
+
+const isValidHeader = (headerArray) => {
+  return (
+    [88, 72, 79, 83, 84, 45, 80, 82, 79]
+      .map((e, idx) => {
+        return e === headerArray[idx];
+      })
+      .filter((e) => e === false).length === 0
+  );
+};
+
+const fileMD5 = (file) => {
+  return new Promise((resolve, reject) => {
+    const blobSlice =
+      File.prototype.slice ||
+      File.prototype["mozSlice"] ||
+      File.prototype["webkitSlice"];
+
+    const chunkSize = 2097152; // Read in chunks of 2MB
+    const chunks = Math.ceil(file.size / chunkSize);
+    const spark = new SparkMD5.ArrayBuffer();
+    const fileReader = new FileReader();
+    let currentChunk = 0;
+
+    const loadNext = () => {
+      const start = currentChunk * chunkSize;
+      const end =
+        start + chunkSize >= file.size ? file.size : start + chunkSize;
+      fileReader.readAsArrayBuffer(blobSlice.call(file, start, end));
+    };
+
+    let major;
+    let minor;
+    let patch;
+    let revision;
+    let fwTarget = "xhost-pro";
+
+    fileReader.onload = (e) => {
+      if (currentChunk === 0) {
+        const result = e.target.result;
+
+        if (!isValidHeader(new Uint8Array(result.slice(0, 9)))) {
+          reject("Invalid Header");
+        }
+        const uint16VersionArray = new Uint16Array(result.slice(9, 17));
+        major = uint16VersionArray[0];
+        minor = uint16VersionArray[1];
+        patch = uint16VersionArray[2];
+        revision = uint16VersionArray[3];
+
+        spark.append(result.slice(17)); // Append array buffer
+      } else {
+        spark.append(e.target.result); // Append array buffer
+      }
+      currentChunk++;
+
+      if (currentChunk < chunks) {
+        loadNext();
+      } else {
+        notify(
+          `Updating firmware v${[major, minor, patch, revision, fwTarget].join(
+            "."
+          )}`
+        );
+
+        resolve([spark.end(), major, minor, patch, revision, fwTarget]); // Compute hash
+      }
+    };
+
+    fileReader.onerror = function () {
+      console.warn("oops, something went wrong.");
+      reject();
+    };
+
+    loadNext();
+  });
+};
+
+const updateOTA = (file) => {
+  if (!file) {
+    return;
+  }
+
+  fetch("/xhost/version")
+    .then((r) => r.json())
+    .then((result) => {
+      const { flashVersion } = result;
+      const [flashMajor, flashMinor, flashPatch, flashRevision, flashTarget] =
+        flashVersion.split(".").map((e, i) => {
+          if (i < 4) {
+            return parseInt(e, 10);
+          }
+          return e;
+        });
+
+      fileMD5(file)
+        .then(([md5, major, minor, patch, revision, fwVersion]) => {
+          if (fwVersion !== flashTarget) {
+            notify("Invalid Board Firmware", 1);
+            return;
+          }
+          const formData = new FormData();
+          const request = new XMLHttpRequest();
+          request.addEventListener("load", () => {
+            if (request.status === 200) {
+              notify(`Firmware Update Completed!<br/>Reseting...`);
+              setTimeout(() => {
+                window.location.reload();
+              }, 5000);
+            } else if (request.status === 500) {
+              notify("Unknown server Error. Please Retry", 1);
+            } else {
+              notify(request.responseText, 1);
+            }
+          });
+          // request.withCredentials = true;
+          let reader = new FileReader();
+          reader.onload = function (e) {
+            if (
+              semverCompare(
+                [major, minor, patch].join("."),
+                [flashMajor, flashMinor, flashPatch].join(".")
+              ) === -1
+            ) {
+              notify(
+                `Invalid Firmware version ${[
+                  flashMajor,
+                  flashMinor,
+                  flashPatch,
+                ].join(
+                  "."
+                )}.<br/>Only same or newer FW versions can be updated via OTA.`,
+                1,
+                0,
+                8000
+              );
+              return;
+            }
+
+            const blob = new Blob([new Uint8Array(e.target.result).slice(17)], {
+              type: "application/octet-stream",
+            });
+            const fileBlob = new File([blob], "firmware", {
+              type: "application/octet-stream",
+            });
+            formData.append("MD5", md5);
+            formData.append("firmware", fileBlob, "firmware");
+            request.open("post", "/xhost/update");
+            request.send(formData);
+          };
+          reader.readAsArrayBuffer(file);
+        })
+        .catch((error) => {
+          notify(error || "Unknown error while uploading Firmware", 1);
+        });
+    });
+};
+
+const downloadOTA = (url) => {
+  return fetch(url)
+    .then((r) => r.arrayBuffer())
+    .then((buffer) => {
+      return new Blob([new Uint8Array(buffer)], {
+        type: "application/octet-stream",
+      });
+    });
+};
+
+const downloadUpdateOTA = (url) => {
+  if (!url) {
+    return;
+  }
+
+  fetch("/xhost/version")
+    .then((r) => r.json())
+    .then((result) => {
+      const { flashVersion } = result;
+      const [flashMajor, flashMinor, flashPatch, flashRevision, flashTarget] =
+        flashVersion.split(".").map((e, i) => {
+          if (i < 4) {
+            return parseInt(e, 10);
+          }
+          return e;
+        });
+
+      let otaBlob;
+      downloadOTA(url)
+        .then((file) => {
+          otaBlob = file;
+          return fileMD5(file);
+        })
+        .then(([md5, major, minor, patch, revision, fwVersion]) => {
+          if (fwVersion !== flashTarget) {
+            notify("Invalid Board Firmware", 1);
+            return;
+          }
+          const formData = new FormData();
+          const request = new XMLHttpRequest();
+          request.addEventListener("load", () => {
+            if (request.status === 200) {
+              notify(`Firmware Update Completed!<br/>Reseting...`);
+              setTimeout(() => {
+                window.location.reload();
+              }, 5000);
+            } else if (request.status === 500) {
+              notify("Server Error", 1);
+            } else {
+              notify(request.responseText, 1);
+            }
+          });
+          // request.withCredentials = true;
+          let reader = new FileReader();
+          reader.onload = function (e) {
+            if (
+              semverCompare(
+                [major, minor, patch].join("."),
+                [flashMajor, flashMinor, flashPatch].join(".")
+              ) === -1
+            ) {
+              notify(
+                `Invalid Firmware version ${[
+                  flashMajor,
+                  flashMinor,
+                  flashPatch,
+                ].join(
+                  "."
+                )}.<br/>Only same or newer FW versions can be updated via OTA.`,
+                1,
+                0,
+                8000
+              );
+              return;
+            }
+
+            const blob = new Blob([new Uint8Array(e.target.result).slice(17)], {
+              type: "application/octet-stream",
+            });
+            const fileBlob = new File([blob], "firmware", {
+              type: "application/octet-stream",
+            });
+            formData.append("MD5", md5);
+            formData.append("firmware", fileBlob, "firmware");
+            request.open("post", "/xhost/update");
+            request.send(formData);
+          };
+          reader.readAsArrayBuffer(otaBlob);
+        })
+        .catch((error) => {
+          notify(error || "Unknown error while uploading Firmware", 1);
+        });
+    });
+};
+
+const wifiConnect = (ssid, password, staIP, gatewayIP) => {
+  const formData = new FormData();
+  formData.append("ssid", ssid);
+  formData.append("password", password);
+  if (staIP) {
+    formData.append("staIP", staIP);
+    formData.append("gatewayIP", gatewayIP);
+  }
+
+  return fetch("/xhost/wifi/connect", {
+    method: "POST",
+    body: formData,
+  });
+};
+
+const isPS4 = () => {
+  const ua = navigator.userAgent;
+  return ua.includes("PlayStation 4");
+};
+
+///////////////////////
+
+const action__uploadFimware = () => {
+  const input = $(".xhost__firmware-input");
+  if (!isPS4()) {
+    input.setAttribute("accept", ".ota");
+    input.click();
+  } else {
+    notify(
+      "PS4 Browser does not support file uploads.\nUse a desktop browser for firmware update",
+      1
+    );
+  }
+};
+
+const action__uploadFilesystem = () => {
+  const input = $(".xhost__firmware-input");
+  if (!isPS4()) {
+    input.setAttribute("accept", ".ota");
+    input.click();
+  } else {
+    notify(
+      "PS4 Browser does not support file uploads.<br/>Please use a desktop browser",
+      1
+    );
+  }
+};
+
+const guard__wifiMode = (mode) => {
+  const modes = {
+    ap: 2,
+    sta: 1,
+  };
+  return xhostAppData.xhostPro.config.wifiMode === modes[mode];
+};
+
+guard__isXHOSTPRO = () => {
+  return true;
+};
+
+guards = {
+  ...guards,
+  guard__wifiMode,
+  guard__isXHOSTPRO,
+};
+
+const action__downloadFirmware = (url) => {
+  downloadUpdateOTA(url);
+};
+
+const action__downloadFilesystem = () => {};
+
+$(".xhost__firmware-input").addEventListener("change", (event) => {
+  const file = event.target["files"][0];
+
+  if (file.name.includes(".fw.ota") || file.name.includes(".fs.ota")) {
+    updateOTA(file);
+    return;
+  }
+
+  notify("Invalid ota file extension. Aborting...", 1);
+});
+
+const action__connectToSSID = (mode = "easy") => {
+  const ssid = prompt("⚙ Enter your 📶 wireless network 🌐 SSID");
+  if (!ssid) {
+    return;
+  }
+
+  const pass = prompt("Enter your 📶 wireless network 🔒 PASSWORD");
+  if (!pass) {
+    return;
+  }
+  let staIP;
+  let gatewayIP;
+  if (mode !== "easy") {
+    staIP = prompt("Enter STA Static IP Address", "192.168.0.106");
+    if (!staIP) {
+      return;
+    }
+    if (!/^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/.test(staIP)) {
+      notify("Invalid Static IP Address", 1);
+      return;
+    }
+    gatewayIP = prompt("Enter Router IP Address", "192.168.0.254");
+    if (!gatewayIP) {
+      return;
+    }
+    if (!/^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/.test(gatewayIP)) {
+      notify("Invalid Static IP Address", 1);
+      return;
+    }
+  }
+
+  if (mode === "easy") {
+    wifiConnect(ssid, pass).then(() => {
+      notify(`Connecting to SSID ${ssid}. Reloading... Please wait`);
+      setTimeout(() => {
+        window.location.href = "/xhost/setup";
+      }, 15000);
+    });
+  } else {
+    wifiConnect(ssid, pass, staIP, gatewayIP).then(() => {
+      notify(
+        `Connecting to SSID ${ssid}.<br/>IP: ${staIP}<br>ROUTER: ${gatewayIP}<br/>Reloading... Please wait`
+      );
+      setTimeout(() => {
+        window.location.href = "/xhost/setup";
+      }, 15000);
+    });
+  }
+};
+
+const action__switchToAP = () => {
+  notify("Redirecting to AP  http://6.6.6.6");
+  wifiConnect("", "");
+  setTimeout(() => {
+    window.location.href = "http://6.6.6.6/xhost/setup";
+  }, 2000);
+};
+
+actions = {
+  ...actions,
+  action__uploadFimware,
+  action__uploadFilesystem,
+  action__downloadFirmware,
+  action__downloadFilesystem,
+  action__connectToSSID,
+  action__switchToAP,
+};
+contextMenuItemsMeta = {
+  ...contextMenuItemsMeta,
+  currentSSID: "pepe",
+};
+
+xhostMain = () => {
+  const menuJson = removeHiddenMenus(menuData);
+  mainMenu = menuJson;
+  mainMenuKeys = Object.keys(mainMenu);
+  mainMenuLength = mainMenuKeys.length;
+  action__showPayloads();
+  generateMainMenu();
+  renderMainMenu();
+};
+
+loadSsidConfig().then(loadVersion).then(loadConfig).then(xhostMain);
+</script>
+  </body>
+</html>

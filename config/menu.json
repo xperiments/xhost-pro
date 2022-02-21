@@ -1,0 +1,470 @@
+{
+  "main": {
+    "items": [
+      {
+        "name": "GoldHEN 2.1.2",
+        "action": "postBinaryPayload",
+        "actionParams": "ghen@latest.900.bin",
+        "desc": "GoldHEN fw9.00"
+      },
+      {
+        "name": "Mira",
+        "desc": "Mira Tools",
+        "action": "contextMenu",
+        "silent": true,
+        "actionParams": [
+          {
+            "action": "loadMiraJailbreak",
+            "name": "Run Mira Jailbreak",
+            "desc": "Run first before MIRA!!!"
+          },
+          {
+            "action": "postBinaryPayload",
+            "name": "Mira",
+            "desc": "Mira Orbis for PS4 9.00 Fw. First run the JB then Mira!!!",
+            "actionParams": "MiraLoader.bin"
+          }
+        ]
+      },
+      {
+        "name": "Binary Loader",
+        "action": "loadBinaryLoader",
+        "desc": "Send payloads to BinaryLoader at port 9020",
+        "hideOffline": true
+      },
+      {
+        "name": "FTP",
+        "action": "postBinaryPayload",
+        "actionParams": "ftp.bin",
+        "desc": "A full access FTP server for the PS4",
+        "hideOffline": true
+      },
+      {
+        "action": "postBinaryPayload",
+        "name": "WebRTE",
+        "desc": "WebRTE PS4 for 9.00 fw",
+        "actionParams": "WebRTE.bin"
+      }
+    ]
+  },
+  "utils": {
+    "items": [
+      {
+        "name": "Debug",
+        "desc": "Debugging tools",
+        "action": "contextMenu",
+        "silent": true,
+        "actionParams": [
+          {
+            "action": "postBinaryPayload",
+            "name": "Orbis Toolbox",
+            "desc": "A full access FTP server for the PS4",
+            "actionParams": "Orbis-Toolbox-900.bin"
+          },
+          {
+            "action": "postBinaryPayload",
+            "name": "Ps4debug",
+            "actionParams": "ps4debug.bin"
+          },
+          {
+            "action": "postBinaryPayload",
+            "name": "Permanent UART",
+            "actionParams": "permanentuart.bin"
+          }
+        ]
+      },
+
+      {
+        "name": "Backup<br/>Dump",
+        "desc": "Backup Utilities",
+        "action": "contextMenu",
+        "silent": true,
+        "actionParams": [
+          {
+            "name": "App2USB",
+            "action": "postBinaryPayload",
+            "actionParams": "app2usb.bin",
+            "desc": "Move installed games to an external USB drive"
+          },
+          {
+            "name": "Dump Game",
+            "action": "postBinaryPayload",
+            "actionParams": "app-dumper.bin",
+            "desc": "Dump Games to a USB drive to be able to create fpkg files"
+          },
+          {
+            "action": "postBinaryPayload",
+            "name": "DB Backup",
+            "actionParams": "backupdb.bin"
+          },
+          {
+            "action": "postBinaryPayload",
+            "name": "DB Restore",
+            "actionParams": "restoredb.bin"
+          },
+          {
+            "action": "postBinaryPayload",
+            "name": "Kernel Dumper",
+            "actionParams": "kerneldumper.bin"
+          },
+          {
+            "action": "postBinaryPayload",
+            "name": "Module Dumper",
+            "actionParams": "mdumper.bin"
+          }
+        ]
+      },
+      {
+        "name": "Switches",
+        "action": "contextMenu",
+        "silent": true,
+        "actionParams": [
+          {
+            "name": "Disable Updates",
+            "action": "postBinaryPayload",
+            "actionParams": "disableupdates.bin",
+            "desc": "Disable System Updates"
+          },
+          {
+            "name": "Enable Update",
+            "action": "postBinaryPayload",
+            "actionParams": "enableupdates.bin",
+            "desc": "Enables System Updates"
+          },
+          {
+            "action": "postBinaryPayload",
+            "name": "Disable ASLR",
+            "actionParams": "disableaslr.bin"
+          },
+          {
+            "action": "postBinaryPayload",
+            "name": "Enable Browser",
+            "actionParams": "enbalebrowser.bin"
+          }
+        ]
+      },
+      {
+        "name": "General",
+        "desc": "General Utilities",
+        "action": "contextMenu",
+        "silent": true,
+        "actionParams": [
+          {
+            "action": "postBinaryPayload",
+            "name": "Orbis Toolbox",
+            "actionParams": "Orbis-Toolbox-900.bin"
+          },
+          {
+            "action": "postBinaryPayload",
+            "name": "Rif renamer",
+            "actionParams": "rifrenamer.bin"
+          },
+          {
+            "action": "postBinaryPayload",
+            "name": "History Blocker",
+            "actionParams": "historyblocker.bin"
+          },
+          {
+            "name": "ToDex",
+            "action": "postBinaryPayload",
+            "actionParams": "ToDex.bin",
+            "desc": "Unlocks some debug features available on testkit"
+          },
+          {
+            "action": "postBinaryPayload",
+            "name": "Exit IDU",
+            "actionParams": "exitidu.bin"
+          }
+        ]
+      },
+      {
+        "name": "Fan",
+        "desc": "Set fan speed",
+        "action": "contextMenu",
+        "silent": true,
+        "actionParams": [
+          {
+            "name": "Fan 50°C",
+            "action": "setFan",
+            "actionParams": { "data": 50 }
+          },
+          {
+            "name": "Fan 55°C",
+            "action": "setFan",
+            "actionParams": { "data": 55 }
+          },
+          {
+            "name": "Fan 60°C",
+            "action": "setFan",
+            "actionParams": { "data": 60 }
+          },
+          {
+            "name": "Fan 65°C",
+            "action": "setFan",
+            "actionParams": { "data": 65 }
+          },
+          {
+            "name": "Fan 70°C",
+            "action": "setFan",
+            "actionParams": { "data": 70 }
+          },
+          {
+            "name": "Fan 75°C",
+            "action": "setFan",
+            "actionParams": { "data": 75 }
+          },
+          {
+            "name": "Fan 80°C",
+            "action": "setFan",
+            "actionParams": { "data": 80 }
+          }
+        ]
+      }
+    ]
+  },
+  "app/games": {
+    "items": [
+      {
+        "name": "Linux",
+        "desc": "Load different versions of Linux",
+        "action": "contextMenu",
+        "silent": true,
+        "actionParams": [
+          {
+            "name": "Linux 1GB",
+            "action": "loadLinux",
+            "actionParams": { "data": 1 }
+          },
+          {
+            "name": "Linux 2GB",
+            "action": "loadLinux",
+            "actionParams": { "data": 2 }
+          },
+          {
+            "name": "Linux 3GB",
+            "action": "loadLinux",
+            "actionParams": { "data": 3 }
+          },
+          {
+            "name": "Linux 4GB",
+            "action": "loadLinux",
+            "actionParams": { "data": 4 }
+          },
+          {
+            "name": "Linux 5GB",
+            "action": "loadLinux",
+            "actionParams": { "data": 5 }
+          }
+        ]
+      },
+      {
+        "name": "GTA",
+        "desc": "GTA Mods",
+        "action": "contextMenu",
+        "silent": true,
+        "hideOffline": true,
+        "actionParams": [
+          {
+            "name": "GTAV A100",
+            "actionParams": "$gtava0.bin",
+            "desc": "GTAV ArabicGuy 1.00 by Karo for 900 L1+R1 ",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "GTAV A127",
+            "actionParams": "$gtava1.bin",
+            "desc": "GTAV ArabicGuy 1.27 by rfoodxmodz fixed by Karo for 900 ==> + []",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "GTAV A132",
+            "actionParams": "$gtava2.bin",
+            "desc": "GTAV ArabicGuy 1.32 by rfoodxmodz fixed by Karo for 900",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "GTAV A133",
+            "actionParams": "$gtava3.bin",
+            "desc": "GTAV ArabicGuy 1.33 by rfoodxmodz for 900",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "GTAV BQ133",
+            "actionParams": "$BeefQueefMod.bin",
+            "desc": "GTAV BeefQueefMod 1.33 by GraFfix_221211 for 900",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "GTAV BQ134",
+            "actionParams": "$BeefQueefMod134.bin",
+            "desc": "GTAV BeefQueefMod 1.34 by GraFfix_221211 for 900 ",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "GTAV BQ138",
+            "actionParams": "$BeefQueefMod138.bin",
+            "desc": "GTAV BeefQueefMod 1.38 by GraFfix_221211 for 900",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "GTAV MB127",
+            "actionParams": "$gtavmb127.bin",
+            "desc": "GTAV Menu-Base 1.27 Ported by Karo for 900 ==> + []",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "GTAV LTS127",
+            "actionParams": "$gtava3.bin",
+            "desc": "GTAV LTS 1.27 Ported by Karo for 900 ==> + []",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "GTAV Ex135",
+            "actionParams": "$LushModz-1.0-9.00.bin",
+            "desc": "GTAV Expulsion Mode Menu 1.35 by LushModz for 900 ",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "GTAV W138",
+            "actionParams": "$WildeModz-1.38.bin",
+            "desc": "GTAV Expulsion Mode Menu 1.38 v1.2 by x_WildeModz_x for 900 ",
+            "action": "postBinaryPayload"
+          }
+        ]
+      },
+      {
+        "name": "RDR2",
+        "desc": "Red dead redemption 2 Mods",
+        "action": "contextMenu",
+        "silent": true,
+        "hideOffline": true,
+        "actionParams": [
+          {
+            "name": "RDR2 V1.00",
+            "actionParams": "$Oysters1.00.bin",
+            "desc": "Red dead redemption 2 mod  menu 1.13 V1.3.4 by RF0oDxM0Dz (R1 + Square)",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "RDR2 V1.13",
+            "actionParams": "$Oysters1.13.bin",
+            "desc": "Red dead redemption 2 mod  menu 1.13 V1.3.4 by RF0oDxM0Dz (R1 + Square)",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "RDR2 V1.19",
+            "actionParams": "$Oysters1.19.bin",
+            "desc": "Red dead redemption 2 mod  menu 1.19 V1.3.4 by RF0oDxM0Dz (R1 + Square)",
+            "action": "postBinaryPayload"
+          },
+          {
+            "name": "RDR2 V1.24",
+            "actionParams": "$Oysters1.24.bin",
+            "desc": "Red dead redemption 2 mod  menu 1.24 V1.3.4 by RF0oDxM0Dz (R1 + Square)",
+            "action": "postBinaryPayload"
+          }
+        ]
+      }
+    ]
+  },
+  "xhost": {
+    "items": [
+      {
+        "name": "Settings",
+        "action": "contextMenu",
+        "silent": true,
+        "actionParams": [
+          {
+            "name": "Setup Wifi",
+            "action": "loadUrl",
+            "actionParams": "/xhost/setup?section=network",
+            "silent": true
+          },
+          {
+            "name": "Update Firmware",
+            "action": "loadUrl",
+            "actionParams": "/xhost/setup?section=firmware",
+            "silent": true
+          },
+          {
+            "name": "USB mount delay",
+            "action": "select",
+            "actionParams": {
+              "options": {
+                "10s": "10000",
+                "15s": "15000",
+                "20s": "20000"
+              },
+              "onchange": "usbDelay",
+              "store": "usbDelay"
+            },
+            "silent": true
+          },
+          {
+            "name": "Enable Offline Cache",
+            "desc": "Cache this Host for offline access",
+            "action": "loadUrl",
+            "actionParams": "index-cached.html",
+            "silent": true,
+            "hideOffline": true
+          },
+          {
+            "name": "Theme",
+            "silent": true,
+            "action": "select",
+            "actionParams": {
+              "options": {
+                "Original": "[\"black\",\"#101010\",\"white\",\"rgb(191,95,95)\",\"0,192,251\",\"#00c0fb\",\"234,182,56\",\"#eab638\"]",
+                "Gold": "[\"black\",\"#101010\",\"white\",\"rgb(191,95,95)\",\"234,182,56\",\"#eab638\",\"0,220,195\",\"#00dcc3\"]",
+                "Citron": "[\"black\",\"#101010\",\"white\",\"rgb(191, 95, 95)\",\"0, 176, 108\",\"#00b06c\",\"245, 227, 130\",\"#f5e382\"]",
+                "Lunar": "[\"black\",\"#101010\",\"white\",\"rgb(255,200,60)\",\"209,87,25\",\"#d15719\",\"0,151,123\",\"#00977b\"]"
+              },
+              "onchange": "theme",
+              "store": "theme"
+            }
+          },
+          {
+            "name": "Theme Background",
+            "silent": true,
+            "action": "select",
+            "actionParams": {
+              "options": {
+                "Original": "original",
+                "Parallax": "parallax"
+              },
+              "onchange": "themeSpeed",
+              "store": "themeSpeed"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Big<br>Thanks",
+        "action": "contextMenu",
+        "silent": true,
+        "actionParams": [
+          { "name": "Al Azif", "silent": true },
+          { "name": "CelesteBlue", "silent": true },
+          { "name": "ChendoChap", "silent": true },
+          { "name": "Ctn", "silent": true },
+          { "name": "Karo", "silent": true },
+          { "name": "Nazky", "silent": true },
+          { "name": "OSM", "silent": true },
+          { "name": "Scene Collective", "silent": true },
+          { "name": "SiSTRo", "silent": true },
+          { "name": "Sleirsgoevy", "silent": true },
+          { "name": "Specter", "silent": true },
+          { "name": "zecoxao", "silent": true },
+          { "name": "Znullptr", "silent": true },
+          { "name": "DH", "silent": true },
+          { "name": "TheWizWikii", "silent": true },
+          { "name": "NanospeedGamer", "silent": true }
+        ]
+      },
+      {
+        "name": "About",
+        "desc": "xhost-pro v1.2.0<br>by xps3riments"
+      }
+    ]
+  }
+}
