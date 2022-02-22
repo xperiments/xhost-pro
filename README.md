@@ -2,7 +2,7 @@
 
 > This is a WIP document. More detailed documentation will come in the future
 
-A musti service HOST for PS4 jailbreak
+A multi service HOST for PS4 jailbreak
 
 # Features
 
@@ -18,7 +18,7 @@ A musti service HOST for PS4 jailbreak
 
 ## Compatible Boards
 
-- ESP-S2 Family of boards
+- ESP-S2 Family of boards (4mb boards seem)
 - ESP8266
 
 ## Roadmap
