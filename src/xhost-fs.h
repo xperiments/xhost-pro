@@ -12,10 +12,8 @@ void setupFS()
 
     if (!LittleFS.begin())
     {
-        // LittleFS.format();
-        // Serial.println("LittleFS not working");
+        LittleFS.format();
     }
-    // Serial.println("LittleFS Initialized");
 }
 
 #endif
