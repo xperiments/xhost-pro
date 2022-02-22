@@ -66,9 +66,7 @@ void wifiSetupSTA()
 
     while (WiFi.status() != WL_CONNECTED && ((millis() - wifiConnectStartTime) < (1000 * WIFI_CONNECT_TIMEOUT)))
     {
-        digitalWrite(15, HIGH);
         delay(1000);
-        digitalWrite(15, LOW);
     }
 
     wifiConnectStartTime = 0;
@@ -92,14 +90,6 @@ void wifiSetupSTA()
     }
     else
     {
-
-        digitalWrite(15, HIGH);
-        delay(5);
-        digitalWrite(15, LOW);
-        delay(1);
-        digitalWrite(15, HIGH);
-        delay(5);
-        digitalWrite(15, LOW);
         configResetToAP();
         wifiSetupAP();
     }

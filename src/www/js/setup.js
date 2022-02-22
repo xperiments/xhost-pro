@@ -11,9 +11,11 @@ selectStores = { ...selectStores, microSD: "disabled" };
 
 const select__usbDelay = (option) => {
   const value = option.value;
+  const mode = value === "0" ? "manual" : "auto";
   selectStores.usbDelay = value;
+  selectStores.usbMode = mode;
   const formData = new FormData();
-  formData.append("usbMode", value === "0" ? "manual" : "auto");
+  formData.append("usbMode", mode);
   formData.append("usbDelay", value);
 
   fetch("/xhost/config", {
@@ -49,7 +51,7 @@ const loadConfig = () =>
       const { usbDelay, usbMode } = config;
       window.XHOST_USB_MODE = usbMode || "manual";
       xhostAppData.xhostPro.config = config;
-      xhostAppData.selectStores = {
+      selectStores = {
         ...selectStores,
         usbDelay,
         usbMode,

@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-String xhostProVersionString = "0.9.0.189.xhost-pro";
+String xhostProVersionString = "0.9.0.190.xhost-pro";
 boolean hasEnabled = false;
 unsigned long enTime = 0;
 
@@ -21,7 +21,7 @@ void setup()
   pinMode(13, OUTPUT);
   digitalWrite(13, LOW);
 #elif defined(ESP32)
-  pinMode(15, OUTPUT);
+  // pinMode(15, OUTPUT);
 #endif
 
   setupFS();
