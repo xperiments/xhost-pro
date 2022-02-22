@@ -143,38 +143,5 @@ void webServerAugmentXHOST()
                               response->addHeader("Content-Encoding", "gzip");
                               request->send(response);
                           } });
-
-    xhostWebServer.on(
-        "/xhost/binary", HTTP_POST,
-        [](AsyncWebServerRequest *request)
-        {
-            if (memFree())
-            {
-                remotePayloadIP = request->client()->remoteIP();
-                request->send(200, "application/json", "{\"success\":\"processing payload\"}");
-                return;
-            }
-        },
-        [](AsyncWebServerRequest *request, String filename, size_t index, uint8_t *data, size_t len, bool final)
-        {
-            if (!index)
-            {
-
-                request->_tempFile = LittleFS.open("/tmp/payload.bin", "w");
-            }
-            if (len)
-            {
-
-                request->_tempFile.write(data, len);
-            }
-            if (final)
-            {
-
-                request->_tempFile.close();
-                pendingPayload = "/tmp/payload.bin";
-            }
-        });
-
-    // xhostWebServer.begin(); // Webserver for the site
 }
 #endif
