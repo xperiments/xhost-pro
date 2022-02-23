@@ -30,19 +30,19 @@ if (!fs.existsSync("../release")) {
 if (target === "fw") {
   processBinary(
     `../.pio/build/d1/firmware.bin`,
-    `../release/${otaVersion}-${context}-esp8266.fw.ota`
+    `../release/esp8266-${context}.fw.ota`
   );
   processBinary(
     `../.pio/build/esp32-s2/firmware.bin`,
-    `../release/${otaVersion}-${context}-esp32-s2.fw.ota`
+    `../release/esp32-s2-${context}.fw.ota`
   );
 } else {
   processBinary(
     `../.pio/build/d1/littlefs.bin`,
-    `../release/${otaVersion}-${context}-esp8266.fs.ota`
+    `../release/esp8266-${context}.fs.ota`
   );
   processBinary(
     `../.pio/build/esp32-s2/.bin`,
-    `../release/${otaVersion}-${context}-esp32-s2.fs.ota`
+    `../release/esp32-s2-${context}.fs.ota`
   );
 }

@@ -74,13 +74,19 @@ const menuData = {
           {
             name: "Online Firmware Update",
             action: "downloadFirmware",
-            actionParams: "http://6.6.6.7:8080/release/esp32-s2.fw.ota",
+            actionParams: {
+              basePath: "http://xperiments.in/xhost-pro",
+              mode: "fw",
+            },
             silent: true,
           },
           {
             name: "Online Filesystem Update",
             action: "downloadFilesystem",
-            actionParams: "http://6.6.6.7:8080/release/esp32-s2.fw.ota",
+            actionParams: {
+              basePath: "http://xperiments.in/xhost-pro",
+              mode: "fs",
+            },
             silent: true,
           },
           {

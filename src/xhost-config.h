@@ -26,13 +26,14 @@ struct Config
     String apPassword = "";
     String usbDelay = "";
     String usbMode = "";
+    String board = "";
 };
 
 Config xhostConfig;
 
 void setWifiMode(String mode)
 {
-#ifdef ESP32
+#if defined(ESP32)
     xhostConfig.wifiMode = mode == "ap" ? WIFI_MODE_AP : WIFI_MODE_STA;
 #elif defined(ESP8266)
     xhostConfig.wifiMode = mode == "ap" ? WIFI_AP : WIFI_STA;
@@ -61,6 +62,7 @@ bool loadConfiguration(const char *filename, Config &config)
     xhostConfig.apPassword = doc["apPassword"].as<String>();
     xhostConfig.usbDelay = doc["usbDelay"].as<String>();
     xhostConfig.usbMode = doc["usbMode"].as<String>();
+    xhostConfig.board = doc["board"].as<String>();
 
     file.close();
     return true;
@@ -90,6 +92,7 @@ bool saveConfiguration(const char *filename, const Config &config)
     doc["apPassword"] = config.apPassword;
     doc["usbDelay"] = config.usbDelay;
     doc["usbMode"] = config.usbMode;
+    doc["board"] = config.board;
 
     if (serializeJson(doc, file) == 0)
     {
@@ -121,10 +124,13 @@ void setupConfig()
     {
         resetToAP();
 
-#ifdef ESP32
+#if defined(ESP32)
+
+        xhostConfig.board = "esp32-s2";
         xhostConfig.usbDelay = "10000";
         xhostConfig.usbMode = "auto";
 #elif defined(ESP8266)
+        xhostConfig.board = "esp8266";
         xhostConfig.usbDelay = "0";
         xhostConfig.usbMode = "manual";
 #endif

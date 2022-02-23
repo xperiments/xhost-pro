@@ -144,7 +144,10 @@ const fileMD5 = (file) => {
         notify(
           `Updating firmware v${[major, minor, patch, revision, fwTarget].join(
             "."
-          )}`
+          )}<br/>It can take several minutes<br/>Please wait...`,
+          1,
+          0,
+          20000
         );
 
         resolve([spark.end(), major, minor, patch, revision, fwTarget]); // Compute hash
@@ -152,7 +155,7 @@ const fileMD5 = (file) => {
     };
 
     fileReader.onerror = function () {
-      console.warn("oops, something went wrong.");
+      notify("Oops, something went wrong.", 1);
       reject();
     };
 
@@ -224,11 +227,14 @@ const updateOTA = (file) => {
             const blob = new Blob([new Uint8Array(e.target.result).slice(17)], {
               type: "application/octet-stream",
             });
-            const fileBlob = new File([blob], "firmware", {
+            const filename = file.name.includes(".fw.ota")
+              ? "firmware"
+              : "filesystem";
+            const fileBlob = new File([blob], filename, {
               type: "application/octet-stream",
             });
             formData.append("MD5", md5);
-            formData.append("firmware", fileBlob, "firmware");
+            formData.append(filename, fileBlob, filename);
             request.open("post", "/xhost/update");
             request.send(formData);
           };
@@ -292,7 +298,7 @@ const downloadUpdateOTA = (url) => {
               notify(request.responseText, 1);
             }
           });
-          // request.withCredentials = true;
+
           let reader = new FileReader();
           reader.onload = function (e) {
             if (
@@ -319,11 +325,14 @@ const downloadUpdateOTA = (url) => {
             const blob = new Blob([new Uint8Array(e.target.result).slice(17)], {
               type: "application/octet-stream",
             });
-            const fileBlob = new File([blob], "firmware", {
+            const filename = file.name.includes(".fw.ota")
+              ? "firmware"
+              : "filesystem";
+            const fileBlob = new File([blob], filename, {
               type: "application/octet-stream",
             });
             formData.append("MD5", md5);
-            formData.append("firmware", fileBlob, "firmware");
+            formData.append(filename, fileBlob, filename);
             request.open("post", "/xhost/update");
             request.send(formData);
           };
@@ -401,7 +410,10 @@ guards = {
   guard__isXHOSTPRO,
 };
 
-const action__downloadFirmware = (url) => {
+const action__downloadFirmware = ({ basePath, mode }) => {
+  const board = xhostAppData.xhostPro.config.board;
+  const url = `${basePath}/ota/${board}-base.${mode}.ota`;
+
   downloadUpdateOTA(url);
 };
 
