@@ -325,7 +325,7 @@ const downloadUpdateOTA = (url) => {
             const blob = new Blob([new Uint8Array(e.target.result).slice(17)], {
               type: "application/octet-stream",
             });
-            const filename = file.name.includes(".fw.ota")
+            const filename = url.includes(".fw.ota")
               ? "firmware"
               : "filesystem";
             const fileBlob = new File([blob], filename, {
