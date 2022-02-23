@@ -43,7 +43,7 @@ A multi service HOST for PS4 jailbreak
   esptool.py --port PORT write_flash 0x00000 YOUR_BOARD.bin
   ```
 
-  > Depending on you OS you may use other tools like the Espressif download tool
+  > Depending on you OS you may use other tools like the [Espressif download tool](https://www.espressif.com/en/support/download/other-tools) or [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher)
 
 ## First login
 
