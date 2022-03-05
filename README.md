@@ -27,6 +27,7 @@ A multi service HOST for PS4 jailbreak
 - **0.9.x** - Add basic ESP32 board compability
 - **0.9.y** - Add SD card support
 - **0.9.y** - Add localization support with i18n
+- **0.9.y** - Add webusb support
 - **1.0.0** - Public Release
 
 ## First Installation
