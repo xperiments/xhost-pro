@@ -18,3 +18,8 @@ const arduinoCode = fs
     `String xhostProVersionString = "${version}.${target}"`
   );
 fs.writeFileSync("../src/main.cpp", arduinoCode, "utf8");
+
+const webusb = fs
+  .readFileSync("../webusb/webusb.manifest.json", "utf8")
+  .replace(/"version": "(.+?)"/g, `"version": "${version}.${target}"`);
+fs.writeFileSync("../webusb/webusb.manifest.json", webusb, "utf8");

@@ -32,6 +32,8 @@ A multi service HOST for PS4 jailbreak
 
 ## First Installation
 
+- RECOMENDED WAY!!!!. WebUSB. Use the [Web Installer](https://xperiments.in/xhost-pro/webusb)
+
 - Flash the correct binary from [releases] to your board (requires python & esptool.py installed)
 
   ```sh
