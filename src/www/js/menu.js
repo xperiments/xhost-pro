@@ -117,9 +117,11 @@ const menuData = {
             actionParams: {
               options: {
                 Disabled: "0",
-                "10s": "10000",
-                "15s": "15000",
-                "20s": "20000",
+                "⌛ 2.5s (S2 only)": "2500",
+                "⌛ 5s (8266 & S2)": "5000",
+                "⌛ 10s (8266 & S2)": "10000",
+                "⌛ 15s (8266 & S2)": "15000",
+                "⌛ 20s (8266 & S2)": "20000",
               },
               onchange: "usbDelay",
               store: "usbDelay",

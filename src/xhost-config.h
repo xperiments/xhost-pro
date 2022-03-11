@@ -127,7 +127,7 @@ void setupConfig()
 #if defined(ESP32)
 
         xhostConfig.board = "esp32-s2";
-        xhostConfig.usbDelay = "10000";
+        xhostConfig.usbDelay = "2500";
         xhostConfig.usbMode = "auto";
 #elif defined(ESP8266)
         xhostConfig.board = "esp8266";
