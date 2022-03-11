@@ -1,4 +1,4 @@
-# XHOST-PRO 0.9.1 public release
+# XHOST-PRO 0.9.2 public release
 
 > This is a WIP document. More detailed documentation will come in the future
 
