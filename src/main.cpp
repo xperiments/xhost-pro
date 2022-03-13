@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-String xhostProVersionString = "0.9.2.14.xhost-pro";
+String xhostProVersionString = "0.9.3.2.xhost-pro";
 boolean hasEnabled = false;
 unsigned long enTime = 0;
 

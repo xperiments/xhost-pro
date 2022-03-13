@@ -1,6 +1,6 @@
 {
   "name": "xhost-pro",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -17,10 +17,10 @@
     "ota:patch": "cd scripts && node ota-patch.js $npm_config_context",
     "add-xhost": "git subtree add --prefix frontend https://github.com/xperiments/xhost.git master --squash",
     "pull-xhost": "git subtree pull --prefix frontend https://github.com/xperiments/xhost.git master --squash",
-    "backup:8266": "esptool.py --port /dev/cu.usbserial-A50285BI read_flash 0x00000 0x400000 ./release/0.9.2-esp8266.bin",
-    "backup:S2": "esptool.py --chip esp32s2 --port /dev/cu.usbmodem01 read_flash 0x00000 0x400000 ./release/0.9.2-esp32s2.bin",
-    "flash:8266": "esptool.py --port /dev/cu.usbserial-A50285BI write_flash 0x00000 ./release/0.9.2-esp8266.bin",
-    "flash:S2": "esptool.py --chip esp32s2 --port /dev/cu.usbmodem01 write_flash 0x00000 ./release/0.9.2-esp32s2.bin",
+    "backup:8266": "esptool.py --port /dev/cu.usbserial-A50285BI read_flash 0x00000 0x400000 ./release/0.9.3-esp8266.bin",
+    "backup:S2": "esptool.py --chip esp32s2 --port /dev/cu.usbmodem01 read_flash 0x00000 0x400000 ./release/0.9.3-esp32s2.bin",
+    "flash:8266": "esptool.py --port /dev/cu.usbserial-A50285BI write_flash 0x00000 ./release/0.9.3-esp8266.bin",
+    "flash:S2": "esptool.py --chip esp32s2 --port /dev/cu.usbmodem01 write_flash 0x00000 ./release/0.9.3-esp32s2.bin",
     "import:xhost": "cd scripts && node frontend.js",
     "package": "npm run revision && npm run import:xhost && npm run pack",
     "build:fw": "pio run -e d1 && pio run -e esp32-s2 && npm run ota:fw",
