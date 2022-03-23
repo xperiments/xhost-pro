@@ -1,4 +1,4 @@
-# XHOST-PRO 0.9.2 public release
+# XHOST-PRO 0.9.4 public release
 
 > This is a WIP document. More detailed documentation will come in the future
 
@@ -25,9 +25,9 @@ A multi service HOST for PS4 jailbreak
 
 - **0.9.1** - First Public ßeta with the above features included
 - **0.9.x** - Add basic ESP32 board compability
-- **0.9.y** - Add SD card support
+- **0.9.y** - Add SD card support (Delayed)
 - **0.9.y** - Add localization support with i18n
-- **0.9.y** - Add webusb support
+- **0.9.y** - Add webusb support (Done)
 - **1.0.0** - Public Release
 
 ## First Installation
