@@ -1,6 +1,6 @@
 {
   "name": "xhost-pro",
-  "version": "0.9.5.0.xhost-pro",
+  "version": "0.9.5.2.xhost-pro",
   "home_assistant_domain": "esphome",
   "builds": [
     {
