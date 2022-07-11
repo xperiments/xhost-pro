@@ -1,15 +1,15 @@
 {
   "name": "xhost-pro",
-  "version": "0.9.5.2.xhost-pro",
+  "version": "0.9.6.1.xhost-pro",
   "home_assistant_domain": "esphome",
   "builds": [
     {
       "chipFamily": "ESP32-S2",
-      "parts": [{ "path": "0.9.5-esp32s2.bin", "offset": 0 }]
+      "parts": [{ "path": "0.9.6-esp32s2.bin", "offset": 0 }]
     },
     {
       "chipFamily": "ESP8266",
-      "parts": [{ "path": "0.9.5-esp8266.bin", "offset": 0 }]
+      "parts": [{ "path": "0.9.6-esp8266.bin", "offset": 0 }]
     }
   ]
 }
