@@ -1,7 +1,6 @@
 const fs = require("fs");
 const { argv } = require("process");
 const { version } = require("../version.json");
-
 const [target = "fw", context = "base"] = argv.slice(2);
 
 let [major, minor, patch, revision] = version
@@ -42,7 +41,7 @@ if (target === "fw") {
     `../release/esp8266-${context}.fs.ota`
   );
   processBinary(
-    `../.pio/build/esp32-s2/.bin`,
+    `../.pio/build/esp32-s2/littlefs.bin`,
     `../release/esp32-s2-${context}.fs.ota`
   );
 }
