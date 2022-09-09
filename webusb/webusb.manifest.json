@@ -5,11 +5,11 @@
   "builds": [
     {
       "chipFamily": "ESP32-S2",
-      "parts": [{ "path": "0.9.6-esp32s2.bin", "offset": 0 }]
+      "parts": [{ "path": "0.9.7-esp32s2.bin", "offset": 0 }]
     },
     {
       "chipFamily": "ESP8266",
-      "parts": [{ "path": "0.9.6-esp8266.bin", "offset": 0 }]
+      "parts": [{ "path": "0.9.7-esp8266.bin", "offset": 0 }]
     }
   ]
 }
